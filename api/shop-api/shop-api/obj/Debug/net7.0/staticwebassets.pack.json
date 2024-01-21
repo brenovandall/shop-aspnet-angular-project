@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\vbren\\OneDrive\\Documentos\\Estudos\\shop\\api\\shop-api\\shop-api\\wwwroot\\Images\\Products\\apple-charger.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\apple-charger.jpg"
+    },
+    {
+      "Id": "C:\\Users\\vbren\\OneDrive\\Documentos\\Estudos\\shop\\api\\shop-api\\shop-api\\wwwroot\\Images\\Products\\corsair-mouse.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\corsair-mouse.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.shop-api.props",
+      "PackagePath": "build\\shop-api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.shop-api.props",
+      "PackagePath": "buildMultiTargeting\\shop-api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.shop-api.props",
+      "PackagePath": "buildTransitive\\shop-api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.shop-api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

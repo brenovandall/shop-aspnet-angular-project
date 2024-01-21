@@ -1,0 +1,128 @@
+<div class="container p-5">
+  <div class="row align-items-center">
+    <!-- Information and Steps on the left -->
+    <div class="col-md-6">
+      <h2>Information and Steps</h2>
+      <ol>
+        <li>Step 1: Lorem ipsum dolor sit amet.</li>
+        <li>Step 2: Consectetur adipiscing elit.</li>
+        <li>Step 3: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+      </ol>
+    </div>
+    <!-- Image on the right -->
+    <div class="col-md-6 text-center">
+      <img [src]="['https://img.freepik.com/fotos-premium/copo-de-papel-voador-com-cafe_565470-825.jpg?w=360']" alt="Description of your image" class="img-fluid">
+    </div>
+  </div>
+
+  <div class="container mt-5">
+  <div class="row">
+    <!-- Filtering Options on the left -->
+    <div class="col-md-3">
+      <div>
+        <h3>Sort</h3>
+        <select class="form-select" (change)="onSortSelected($event)">
+          @for(item of sortOptions; track item.value) {
+            <option [value]="item.value">{{item.name}}</option>
+          }
+        </select>
+      </div>
+
+      <div>
+          <h3>Filter By Type</h3>
+          <ul class="list-group my-3">
+            @for(item of types; track item.id) {
+              <li class="list-group-item"
+                [class.active]="item.id === shopParams.typeId"
+                [value]="item.id"
+                (click)="onBrandSelected(item.id)">{{item.name}}</li>
+            }
+            
+        </ul>
+      </div>
+
+      <div class="pt-3">
+          <h3>Filter By Brand</h3>
+          <ul class="list-group my-3">
+            @for(item of brands; track item.id) {
+              <li class="list-group-item"
+                [class.active]="item.id === shopParams.brandId"
+                [value]="item.id"
+                (click)="onBrandSelected(item.id)">{{item.name}}</li>
+            }
+            
+        </ul>
+      </div>
+      
+    </div>
+
+    <div class="col-md-9">
+      <div class="d-flex justify-content-between">
+        <div>
+          @if(totalCount > 0) {
+            <p>Showing 
+              <span>
+                {{(shopParams.pageNumber - 1) * shopParams.pageSize + 1}} - 
+                {{shopParams.pageNumber * shopParams.pageSize
+                  > totalCount
+                  ? totalCount
+                  : shopParams.pageNumber * shopParams.pageSize
+                }}
+              </span> results of <span>{{totalCount}}</span></p>
+          } @else {
+          <span>0 results found</span>
+          }
+        </div>
+
+        <div>
+          <input (keyup)="onSearch()" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" #search>
+          <button class="btn btn-outline-success" type="submit" (click)="onSearch()">Search</button>
+          <button class="btn btn-outline-success" type="submit" (click)="onReset()">Reset</button>
+        </div>
+          
+        
+      </div>
+      
+      <div class="row">
+        @for(item of products; track item.id) {
+              <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                  <img src="{{item.imageUrl}}" class="card-img-top product-image" alt="Product Image">
+                  <div class="card-body">
+                    <h5 class="card-title">{{item.name}}</h5>
+                    <ul class="specifications">
+                      <li><strong>Color:</strong> Blue</li>
+                      <li><strong>Size:</strong> Medium</li>
+                      <li><strong>Material:</strong> Polyester</li>
+                    </ul>
+                    <div class="price">Price: ${{item.price}}</div>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <button [routerLink]="['/details/', item.id]" class="btn btn-secondary">Details</button>
+                      <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                  </div>
+                </div>
+          </div>
+        }          
+      </div>
+      
+      <div class="d-flex justify-content-center">
+        @if(totalCount > 0) {
+          <pagination 
+          [boundaryLinks]="true" 
+          [totalItems]="totalCount"
+          [itemsPerPage]="shopParams.pageSize"
+          [maxSize]="9"
+          (pageChanged)="onPageChange($event)"
+          previousText="&lsaquo;" 
+          nextText="&rsaquo;" 
+          firstText="&laquo;" 
+          lastText="&raquo;">
+ 
+          </pagination>
+        }
+      </div>
+    </div>
+  </div>
+</div>
+</div>

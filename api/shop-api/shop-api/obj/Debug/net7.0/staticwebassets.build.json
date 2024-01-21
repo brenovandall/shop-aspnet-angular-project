@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "Hash": "brOFJEsPzeC1KdgnM1x0gDyYP9eW2SMLYyJp8UymMr8=",
+  "Source": "shop-api",
+  "BasePath": "_content/shop-api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "shop-api\\wwwroot",
+      "Source": "shop-api",
+      "ContentRoot": "C:\\Users\\vbren\\OneDrive\\Documentos\\Estudos\\shop\\api\\shop-api\\shop-api\\wwwroot\\",
+      "BasePath": "_content/shop-api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\vbren\\OneDrive\\Documentos\\Estudos\\shop\\api\\shop-api\\shop-api\\wwwroot\\Images\\Products\\apple-charger.jpg",
+      "SourceId": "shop-api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\vbren\\OneDrive\\Documentos\\Estudos\\shop\\api\\shop-api\\shop-api\\wwwroot\\",
+      "BasePath": "_content/shop-api",
+      "RelativePath": "Images/Products/apple-charger.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Products\\apple-charger.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\vbren\\OneDrive\\Documentos\\Estudos\\shop\\api\\shop-api\\shop-api\\wwwroot\\Images\\Products\\corsair-mouse.jpg",
+      "SourceId": "shop-api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\vbren\\OneDrive\\Documentos\\Estudos\\shop\\api\\shop-api\\shop-api\\wwwroot\\",
+      "BasePath": "_content/shop-api",
+      "RelativePath": "Images/Products/corsair-mouse.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Products\\corsair-mouse.jpg"
+    }
+  ]
+}
